@@ -1,0 +1,13 @@
+<div class="indiaclass">
+    <div><router-outlet></router-outlet></div>
+<h2>This is india page</h2>
+<div> 
+    <span>Enter your name:</span>
+    <div><input type="text" [(ngModel)]="myname" placeholder="eg:name"/></div>
+   <span>Enter your adhar number:</span>
+   <div><input type="text" [(ngModel)]="adharno" placeholder="eg:123456"/></div>
+   <div><Button class="btn" (click)="handleClickIndia($event)">Click-Me</Button>
+   <span><Button class="btn" (click)="handleBackItoM()">MainPage</Button></span></div>
+   <div></div>
+</div>
+</div>

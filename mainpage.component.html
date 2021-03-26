@@ -1,0 +1,14 @@
+<div class="mainclass">
+    <p>mainpage works!</p>
+    <div>This is main page!!!!</div>
+    <div class="country">
+        <h5>select any one of the countries below</h5>
+        <select [(ngModel)]="optionSelected" (change)="onNavigate($event)">
+            <option>Select</option>
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+        </select>
+        <p>{{optionSelected}}</p>
+    </div>
+</div>

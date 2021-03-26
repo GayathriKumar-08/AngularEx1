@@ -1,0 +1,25 @@
+<p>updateproduct works!</p>
+
+<div>
+    <div>
+        <div>Product-ID</div>
+        <div><input type="text" [(ngModel)]="myproduct.pid" #id></div>
+    </div>
+    <div>
+        <div>Product-Name</div>
+        <div><input type="text" [(ngModel)]="myproduct.pname" #pnm></div>
+    </div>
+    <div>
+        <div>Product-Description</div>
+        <div><input type="text" [(ngModel)]="myproduct.pdescription" #pdes></div>
+    </div>
+    <div>
+        <div>Product-Cost</div>
+        <div><input type="text" [(ngModel)]="myproduct.pcost" #pco></div>
+    </div>
+    <div>
+           <button (click)="goBack()">GoBack</button>
+    </div>
+
+</div>
+<hr>

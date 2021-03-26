@@ -1,0 +1,12 @@
+<div class="usaclass">
+    <h2>This is USA page</h2>
+    <div>
+        <span>Enter your SSN number:</span>
+        <div><input type="text" [(ngModel)]="ssn" placeholder="eg:12345" /></div>
+        <span>Enter your Passport number:</span>
+        <div><input type="text" [(ngModel)]="pass" placeholder="eg:2525424" /></div>
+        <div><Button class="btn" (click)="handleUsa()">Click</Button>
+            <span><Button class="btn" (click)="handleBackUSAtoM()">MainPage</Button></span>
+        </div>
+    </div>
+</div>
