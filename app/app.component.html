@@ -1,0 +1,36 @@
+
+<div>
+  <h4>Angular</h4>
+  <router-outlet></router-outlet>
+  <div><button (click)="handleMp()">MainPage</button></div>
+</div>
+<hr>
+<!---->
+<div>
+  <h2>Product</h2>
+  <div *ngFor="let p of myproduct">
+    {{p.pid}} {{p.pname}} {{p.pdescription}} {{p.pcost}}
+  </div>
+</div>
+<hr>
+<div>
+  <h2>My child component</h2>
+  <div>
+    <app-grid [(products)]="myproduct" (eadd)="handleAddProd($event)" (erem)="handleRemoveProd($event)"></app-grid>
+  </div>
+</div>
+<hr>
+
+<div>
+  <div> <input type="text" [(ngModel)]="len" /> </div>
+  <div *ngIf="mycities.length>len">
+    <div *ngFor="let xyz of mycities">
+      {{xyz.id}}-{{xyz.cName}}-{{xyz.countryName}}
+    </div>
+    <hr>
+  </div>
+  <h4 *ngIf="SelectedCity">Selected City is {{SelectedCity.cName}} from {{SelectedCity.countryName}}</h4>
+  <div *ngFor="let c of mycities" [class.selected]="c==SelectedCity" (click)="handleClick(c)">
+    <span>{{c.id}}-{{c.cName}}-{{c.countryName}}</span>
+  </div>
+</div>
