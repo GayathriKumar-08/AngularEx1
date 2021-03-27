@@ -1,0 +1,78 @@
+<div>
+   <h2>Product</h2>
+  <div *ngFor="let p of myproduct">
+  {{p.pid}} {{p.pname}} {{p.pdescription}} {{p.pcost}}
+  </div>
+</div>
+<hr>
+<div>
+   <h2>My child component</h2>
+   <div>
+     <app-grid [products]="myproduct"></app-grid>
+   </div>
+  </div>
+  <hr>
+<div>
+  <h3>My First Angular Ex!!!!</h3>
+  <h2>QuestionNo.1....</h2>
+  <div>{{textWords}}</div>
+  <img [src]="gUrl"><br>
+  <input type="text" [value]="myName">
+  <hr>
+  <br><div>{{textWords1}}</div>
+  <input type="text" [(ngModel)]="name">
+  <p>{{name}}</p>
+  </div>
+  <hr>
+<div class="secondex">
+     <div>
+      <h2>QuestionNo.2....</h2>
+      <h4>On Keyup:</h4>  
+      <textarea (keyup)="onKeyUp($event)"></textarea>
+      <P>{{text}}</P>
+    </div>
+    <div>
+      <h4>Text Box’s key entry</h4>  
+       <input type="text" (input)="onKeyUp1($event)"/>
+      <P>{{txt}}</P>
+     </div>
+    <div>
+     <h4>Text Box’s key entry</h4>  
+      <input type="text" (keyup.enter)="onEnterKey($event)"/>
+     <P>{{t}}</P>
+    </div>
+    <div>
+      <h4>Button Click</h4>  
+       <button (click)="onClick()">Click Me</button>
+       <p>{{btn}}</p>
+    </div>
+    <div>
+    </div>
+</div>
+<hr>
+<div class="thirdques">
+  <h3>QuestionNo.3....</h3>
+  <div class="content">
+  <table>
+   <tr><td><label>Enter ur name:</label>
+    <input type="text" #emailid/></td></tr>
+<tr><td><label>Enter phone number:</label>
+    <input type="text" #pass/></td></tr>
+  <tr><td><label>Select ur book:</label>
+     <select #book> 
+      <option>Narniya</option>
+      <option>Home Alone</option>
+      <option>Jumanji</option>
+      <option>Alice in the wonderland</option>
+     </select></td></tr>
+    <tr><td><label>Enter ur address:</label>
+    <textarea #com></textarea></td></tr><br>
+    <tr><td><button (click)=onClick1(emailid.value,pass.value,book.value,com.value)>clickme</button></td></tr>
+  </table>
+  </div>
+</div>
+<hr>
+<div>
+  <h3>QuestionNo.4....</h3>
+</div>
+  

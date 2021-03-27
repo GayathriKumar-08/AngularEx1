@@ -1,5 +1,5 @@
-import BaseModel from './BaseModel'
-export class product extends BaseModel {
+import BaseModel from './BaseModel';
+export default class product extends BaseModel {
     constructor(pid:number,pname:string,pdescription:String,pcost:number)
     {
         super();
@@ -13,6 +13,4 @@ export class product extends BaseModel {
     pname:string="";
     pdescription:String="";
     pcost:number=0;
-
-
 }

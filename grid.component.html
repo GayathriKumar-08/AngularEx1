@@ -1,0 +1,34 @@
+<table border="1">
+    <tr>
+        <td>Product-ID</td>
+        <td>Product-Name</td>
+        <td>Product-Description</td>
+        <td>Product-Cost</td>
+    </tr>
+       <tr *ngFor="let p of products">
+        <td>{{p.pid}}</td>
+        <td>{{p.pname}}</td>
+        <td>{{p.pdescription}}</td>
+        <td>{{p.pcost}}</td>
+    </tr>
+</table>
+<div>
+    <h3>child to parent</h3>
+      <div>
+          <div>Product-ID</div>
+          <div><input type="text" [value]="prod.pid"></div>
+      </div>
+      <div>
+        <div>Product-Name</div>
+        <div><input type="text" [value]="prod.pname"></div>
+    </div>
+    <div>
+        <div>Product-Description</div>
+        <div><input type="text" [value]="prod.pdescription"></div>
+    </div>
+    <div>
+        <div>Product-Cost</div>
+        <div><input type="text" [value]="prod.pcost"></div>
+    </div>
+    <button (click)="handleAddProd()">Add Prodcut</button>
+</div>
